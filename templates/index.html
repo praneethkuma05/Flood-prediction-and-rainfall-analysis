@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/fontawesome-all.css" rel="stylesheet">
+    <link href="static/css/swiper.css" rel="stylesheet">
+	<link href="static/css/magnific-popup.css" rel="stylesheet">
+	<link href="static/css/styles.css" rel="stylesheet">
+</head>
+<style>
+    header{
+    background-image: linear-gradient(to right, rgb(56, 6, 63) , rgb(193, 116, 228));          
+    }
+    body{
+    background-image: linear-gradient(to right, rgb(164, 100, 180) , rgb(56, 6, 63));
+    }
+    label b{
+        color: rgb(29, 6, 59);
+        font-size:20px;
+    }
+    ::placeholder {
+    color: rgb(46, 44, 44);
+    opacity: 1; /* Firefox */
+    font-size:13px;
+    }
+form{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+</style>
+
+<bodydata-spy="scroll" data-target=".fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto"></ul>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/home">Back</a>
+                    </li>
+                </ul>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+<!-- Header -->
+<header class="ex-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-10 offset-xl-1">
+                <h1>Flood prediction</h1>
+                <br>
+            </div> <!-- end of col -->
+            
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+<div class="ex-basic-1 pt-4"></div>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <div class="col">
+                <form action='/predict' method="post" class="col s12">
+                    <div class="input-field col s4">
+                        <label for="ANNUAL"><b>ANNUAL Rainfall</b></label>
+                        <input placeholder="ANNUAL eg. 2558.6" name="1" id="ANNUAL" type="text" class="validate">
+                    </div><br>
+                    <div class="input-field col s4">
+                        <label for="Jun-Sep"><b>Jun-Sep Rainfall</b></label>
+                        <input placeholder="Jun-Sep eg.1569.6" name="2" id="Jun-Sep" type="text" class="validate">
+                    </div><br>
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>JUL Rainfall</b></label>
+                        <input placeholder="JUL eg. 525.6" name="4" id="first_name" type="text" class="validate">
+                    </div><br>
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>AUG Rainfall</b></label>
+                        <input placeholder="AUG eg. 556.6" name="5" id="first_name" type="text" class="validate">
+                    </div><br>
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>SEP Rainfall</b></label>
+                        <input placeholder="SEP eg. 569.6" name="6" id="first_name" type="text" class="validate">
+                    </div><br>
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>OCT Rainfall</b></label>
+                        <input placeholder="OCT	 eg. 545.6" name="9" id="first_name" type="text" class="validate">
+                    </div><br>
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>Oct-Dec Rainfall</b></label>
+                        <input placeholder="Oct-Dec eg. 512.6" name="10" id="first_name" type="text" class="validate">
+                    </div><br>
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>CityName</b></label>
+                        <input placeholder="Cityname" name="c" id="first_name" type="text" class="validate">
+                        </div><br>
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>Flow of water</b></label>
+                        <input type="text" list="cars" class="validate" />
+                                <datalist id="cars">
+                                <option>Yes</option>
+                                <option>No</option>
+                                </datalist>
+                    </div><br>
+                    <div class="input-field col s4">
+                            <label for="first_name"><b>Moisture</b></label>
+                            <input type="text" list="m" class="validate" />
+                                <datalist id="m">
+                                <option>Dry Land</option>
+                                <option>Wet Land</option>
+                                </datalist>
+                        </div><br>
+                    <div class="input-field col s4">
+                            <label for="first_name"><b>Water Pressure</b></label>
+                            <input type="text" list="wp" class="validate" />
+                                <datalist id="wp">
+                                    <option>High</option>
+                                    <option>Medium</option>
+                                    <option>Low</option>
+                                </datalist>
+                        </div><br>
+                    <div class="input-field col s4">
+                        <label for="first_name"><b>Altitude</b></label>
+                        <input placeholder="Altitude" name="c" id="first_name" type="text" class="validate">
+                        </div>
+                    </div><br>
+                    <div class="col center">
+                        <button style="text-align: center;" type="submit" class="btn-large waves-effect waves-blue">Submit</button>
+                    </div><br>
+                </form>
+            </div>
+        </div><br><br><br>
+    </div>
+</div>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="static/js/materialize.js"></script>
+    <script src="static/js/init.js"></script>
+
+    <!-- Scripts -->
+    <script src="static/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="static/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="static/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="static/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="static/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="static/js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
